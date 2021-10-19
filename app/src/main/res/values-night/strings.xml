@@ -3,4 +3,6 @@
     <string name="post">Post</string>
     <string name="write_a_caption">Write a caption...</string>
     <string name="take_picture">Take Picture</string>
+    <string name="login">Login</string>
+    <string name="create_new_account">Create New Account</string>
 </resources>
