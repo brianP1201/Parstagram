@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="post">Post</string>
+    <string name="write_a_caption">Write a caption...</string>
+    <string name="take_picture">Take Picture</string>
+</resources>
