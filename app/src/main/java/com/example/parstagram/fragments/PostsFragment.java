@@ -63,6 +63,9 @@ public class PostsFragment extends Fragment {
                 // Make sure you call swipeContainer.setRefreshing(false)
                 // once the network request has completed successfully.
                 queryPosts();
+                if(swipeContainer.isRefreshing()){
+                    swipeContainer.setRefreshing(false);
+                }
             }
         });
 
@@ -80,7 +83,6 @@ public class PostsFragment extends Fragment {
        // 4. set the layout manager on the recycler view
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPosts();
-        swipeContainer.setRefreshing(false);
     }
 
     protected void queryPosts() {
@@ -99,6 +101,7 @@ public class PostsFragment extends Fragment {
                     Log.i(TAG, "Post: " + post.getDescription()
                             + ", username: " + post.getUser().getUsername());
                 }
+                allPosts.clear();
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
             }
